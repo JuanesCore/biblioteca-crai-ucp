@@ -2,7 +2,6 @@
   "name": "crud-app",
   "version": "3.3.0",
   "private": true,
-  "homepage": "https://safdarjamal.github.io/crud-app/",
   "author": {
     "name": "Safdar Jamal",
     "url": "https://safdarjamal.github.io"
@@ -11,13 +10,19 @@
     "@testing-library/jest-dom": "^5.16.4",
     "@testing-library/react": "^13.3.0",
     "@testing-library/user-event": "^13.5.0",
+    "firebase": "^12.12.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-router-dom": "^6.30.3",
     "react-scripts": "^5.0.1",
+    "recharts": "^3.8.1",
     "sweetalert2": "^11.4.18"
   },
   "scripts": {
     "start": "react-scripts start",
+    "start:frontend": "react-scripts start",
+    "start:backend": "npm --prefix backend run dev",
+    "start:full": "concurrently \"npm run start:frontend\" \"npm run start:backend\"",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
@@ -43,6 +48,7 @@
     ]
   },
   "devDependencies": {
+    "concurrently": "^9.0.1",
     "gh-pages": "^4.0.0"
   }
 }

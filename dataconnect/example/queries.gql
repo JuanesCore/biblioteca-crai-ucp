@@ -1,0 +1,32 @@
+mutation CreateItem($contentTypeId: UUID!, $data: String!) @auth(level: USER, insecureReason: "This operation creates data associated with the authenticated user.") {
+  item_insert(data: {
+    contentTypeId: $contentTypeId,
+    data: $data,
+    createdAt_expr: "request.time"
+  })
+}
+
+query GetMyItems @auth(level: USER, insecureReason: "This query fetches data owned by the authenticated user.") {
+  items(where: {contentType: {items_on_contentType: {contentTypeId: {eq_expr: "auth.uid"}}}}) {
+    id
+    data
+    createdAt
+    contentType {
+      name
+    }
+  }
+}
+
+mutation UpdateItemData($itemId: UUID!, $newData: String!) @auth(level: USER, insecureReason: "This operation updates data owned by the authenticated user.") {
+  item_update(
+    key: {id: $itemId},
+    data: {
+      data: $newData,
+      updatedAt_expr: "request.time"
+    }
+  )
+}
+
+mutation DeleteItem($itemId: UUID!) @auth(level: USER, insecureReason: "This operation deletes data owned by the authenticated user.") {
+  item_delete(key: {id: $itemId})
+}

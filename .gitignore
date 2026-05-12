@@ -1,0 +1,34 @@
+# Dependencies
+node_modules/
+
+# Build
+build/
+dist/
+
+# Environment and secrets
+.env
+.env.*
+!.env.example
+.vscode/.env
+
+# Logs and debug
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+*.log
+
+# OS and editor
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+
+# Testing
+coverage/
+
+# Firebase / local
+.firebase/
+*-debug.log
+.runtimeconfig.json
+serviceAccountKey.json
+**/serviceAccountKey.json

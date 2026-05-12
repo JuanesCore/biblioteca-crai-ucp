@@ -2,8 +2,8 @@
 <browserconfig>
     <msapplication>
         <tile>
-            <square150x150logo src="/crud-app/mstile-150x150.png"/>
-            <TileColor>#2b5797</TileColor>
+            <square150x150logo src="/logo-ucp.jpg"/>
+            <TileColor>#6b0f2a</TileColor>
         </tile>
     </msapplication>
 </browserconfig>

@@ -1,0 +1,19 @@
+type ContentType @table {
+  name: String!
+  schema: String!
+  description: String
+}
+
+type Item @table {
+  contentType: ContentType!
+  data: String!
+  createdAt: Timestamp!
+  updatedAt: Timestamp
+}
+
+type User @table {
+  username: String!
+  createdAt: Timestamp!
+  email: String
+  displayName: String
+}

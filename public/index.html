@@ -1,67 +1,43 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="A simple and beautiful CRUD application built with React."
+      content="Biblioteca CRAI — Buscador académico de la Universidad Católica de Pereira."
     />
-    <title>CRUD App</title>
+    <title>Biblioteca CRAI UCP</title>
 
-    <!-- Theme Color -->
-    <meta name="theme-color" content="#000000" />
+    <meta name="theme-color" content="#6b0f2a" />
 
-    <!-- Web App Manifest -->
     <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
 
-    <!-- Android -->
     <meta name="mobile-web-app-capable" content="yes" />
-    <meta name="application-name" content="CRUD App" />
-    <link
-      rel="icon"
-      sizes="192x192"
-      href="%PUBLIC_URL%/android-chrome-192x192.png"
-    />
-    <link
-      rel="icon"
-      sizes="512x512"
-      href="%PUBLIC_URL%/android-chrome-512x512.png"
-    />
+    <meta name="application-name" content="Biblioteca CRAI UCP" />
 
-    <!-- iOS -->
+    <link rel="icon" href="%PUBLIC_URL%/logo-ucp.jpg" type="image/jpeg" sizes="any" />
+    <link rel="shortcut icon" href="%PUBLIC_URL%/logo-ucp.jpg" type="image/jpeg" />
+
     <meta name="apple-mobile-web-app-capable" content="yes" />
-    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
-    <meta name="apple-mobile-web-app-title" content="CRUD App" />
-    <link rel="apple-touch-icon" href="%PUBLIC_URL%/apple-touch-icon.png" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+    <meta name="apple-mobile-web-app-title" content="CRAI UCP" />
+    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo-ucp.jpg" />
 
-    <!-- Windows  -->
-    <meta name="msapplication-TileColor" content="#2b5797" />
-    <meta
-      name="msapplication-TileImage"
-      content="%PUBLIC_URL%/mstile-150x150.png"
-    />
-    <meta
-      name="msapplication-config"
-      content="%PUBLIC_URL%/browserconfig.xml"
-    />
+    <meta name="msapplication-TileColor" content="#6b0f2a" />
+    <meta name="msapplication-TileImage" content="%PUBLIC_URL%/logo-ucp.jpg" />
 
-    <!-- Pinned Tab  -->
-    <link
-      rel="mask-icon"
-      href="%PUBLIC_URL%/safari-pinned-tab.svg"
-      color="#5bbad5"
-    />
+    <link rel="mask-icon" href="%PUBLIC_URL%/safari-pinned-tab.svg" color="#6b0f2a" />
 
-    <!-- Favicon -->
-    <link
-      rel="shortcut icon"
-      href="%PUBLIC_URL%/favicon.ico"
-      type="image/x-icon"
-    />
+    <!-- Optional runtime Firebase config (fallback if REACT_APP_FIREBASE_* is missing).
+         You can set window.__FIREBASE_CONFIG__ in hosting without rebuilding. -->
+    <script>
+      window.__FIREBASE_CONFIG__ = window.__FIREBASE_CONFIG__ || null;
+      window.__REACT_APP_API_URL__ = window.__REACT_APP_API_URL__ || null;
+    </script>
   </head>
   <body>
-    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <noscript>Necesitas habilitar JavaScript para usar esta aplicación.</noscript>
     <div id="root"></div>
   </body>
 </html>

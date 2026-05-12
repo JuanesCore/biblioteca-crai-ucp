@@ -1,0 +1,40 @@
+mutation SeedData @auth(level: PUBLIC, insecureReason: "This operation is safe to expose to the public") @transaction {
+  user1: user_insert(data: {
+    id: "a0eebc99-9c0b-4ef8-bb6d-6bb9bd380a11",
+    username: "alice_doe",
+    email: "alice.doe@example.com",
+    createdAt: "2024-01-01T10:00:00Z",
+    displayName: "Alice Doe"
+  })
+  user2: user_insert(data: {
+    id: "b1fcc1d0-1e5f-4a9c-9c0f-6bb9bd380a22",
+    username: "bob_smith",
+    email: "bob.smith@example.com",
+    createdAt: "2024-01-01T10:05:00Z",
+    displayName: "Bob Smith"
+  })
+  contentType1: contentType_insert(data: {
+    id: "c2gdd2e1-2f6a-4b0d-ad10-7cc9bd380a33",
+    name: "Article",
+    schema: "{\"title\": \"string\", \"content\": \"string\", \"authorId\": \"uuid\"}",
+    description: "Schema for general articles"
+  })
+  contentType2: contentType_insert(data: {
+    id: "d3hec3f2-3g7b-4c1e-be11-8dd9bd380a44",
+    name: "Blog Post",
+    schema: "{\"title\": \"string\", \"body\": \"string\", \"tags\": \"[string]\"}",
+    description: "Schema for blog posts"
+  })
+  item1: item_insert(data: {
+    id: "e4ifd4g3-4h8c-4d2f-cf12-9ee9bd380a55",
+    contentTypeId: "c2gdd2e1-2f6a-4b0d-ad10-7cc9bd380a33",
+    data: "{\"title\": \"The Future of AI\", \"content\": \"Artificial intelligence is rapidly evolving...\", \"authorId\": \"a0eebc99-9c0b-4ef8-bb6d-6bb9bd380a11\"}",
+    createdAt: "2024-01-02T11:00:00Z"
+  })
+  item2: item_insert(data: {
+    id: "f5jg5h4-5i9d-4e3g-dg13-0ff9bd380a66",
+    contentTypeId: "d3hec3f2-3g7b-4c1e-be11-8dd9bd380a44",
+    data: "{\"title\": \"My First Blog\", \"body\": \"Hello world! This is my first blog post.\", \"tags\": [\"welcome\", \"first post\"]}",
+    createdAt: "2024-01-03T12:00:00Z"
+  })
+}
